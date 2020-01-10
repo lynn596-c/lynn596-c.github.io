@@ -3,20 +3,28 @@
 }
 body{
     margin: 0;
-    font-family:  'Noto Sans TC','Philosopher', sans-serif;
+    font-family:  '微軟正黑體','Noto Sans TC','Philosopher', sans-serif;
 }
 ul li{
     list-style: none;
 }
 .link{
-    font-size: 24px;
+    font-size: 21px;
     padding: 10px;
+    margin-top: 15px;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+a:hover{
+    color: rgb(224, 88, 64);
+
 }
 
 .banner{
     width: 100%;
     height: 780px;
-    background-color: antiquewhite;
     position: relative;
     display: flex;
 }
@@ -46,13 +54,20 @@ ul li{
     height: 100%;
     float: left;
 }
+.swiper-button-next:after{
+    color: #E6E7D4;
+}
+.swiper-button-prev:after{
+    color: #E6E7D4;
+}
 .banner-img{
     width: 100%;
     height: 100%;
 }
 
 
-.navbar{
+
+#navbar{
     width: 155px;
     height: 100%;
     background-color: #E6E7D4;
@@ -64,27 +79,29 @@ ul li{
     width: 135px;
     height: 85px;
     margin: auto;
+    margin-top: 20px;
     background-image: url('/img/logo-square.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat; 
+}
+.menu{
+    margin-top: 55px;
+    padding: unset;
 }
 
 
+/* 關於藥草 */
 #section-1{
     width:calc(100% - 155px);
     /* height: 1156px; */
     float: right;
-    /* background-image: url('/img/底圖_工作區域\ 1.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center; */
+    margin-top: 20px;
 }
 .title{
-    padding: 0px 43%;
     color: #0C1C04;
     font-size: 36px;
     font-weight: 900;
+    text-align: center;
 }
 .title-2{
     padding: 5px 17%;
@@ -99,25 +116,32 @@ ul li{
 
 .history{
     width: 100%;
-    height: 50%;
+    /* height: 50%; */
     display:flex;
 }
 .history-img{
-    height: 100%;
+    /* height: 100%; */
     width: 48%;
     box-shadow:0px 0px 5px 2px rgb(129, 129, 129);
+    margin-top: 23px;
+}
+.h2-style{
+     color: #0C1C04;
+     margin-top: 0;
+     text-align: center;
 }
 .history-text{
     padding: 11px 25px;
     margin-right: 34px;
+    padding-top: 0;
 }
 .medicine{
     width: 100%;
-    height: 42%;
+    /* height: 42%; */
     display:flex;
 }
 .medicine-img{
-    height: 100%;
+    /* height: 100%; */
     width: 44%;
     margin-right: 61px;
     box-shadow:0px 0px 5px 2px rgb(129, 129, 129);
@@ -127,26 +151,24 @@ ul li{
 }
 .picture{
     width: 100%;
-    height: 1000px;
-    background-image: url('/img/底圖3_工作區域\ 1.jpg');
+    height: 750px;
+    background-image: url('/img/底圖3_工作區域\ 1.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-/* .picture-img{
-    width: 100%;
-    height: 100%;
-} */
 
 
+/* 認識藥草 */
 #section-2 {
     width:calc(100% - 155px);
-    height: 1080px;
+    height: 1330px;
     float: right;
+    margin-top: 30px;
 }
 .commonArea{
     width:65%;
-    height: 35%;
+    height: 40%;
     margin: auto;
 }
 .commonArea .swiper-container{
@@ -159,12 +181,12 @@ ul li{
     display: flex;
 }
 .common-img{
-    width: 40%;
-    height: 100%;
+    width: 45%;
+    /* height: 100%; */
 }
 .common-text{
     width: 60%;
-    height: 100%;
+    /* height: 100%; */
     background-color:#676E5E;
     padding: 36px ;
     color: white;
@@ -173,13 +195,17 @@ ul li{
 }
 .saveArea{
     width:65%;
-    height: 45%;
+    /* height: 41%; */
     margin: auto;
-    margin-top: 10px;
+    margin-top: 40px;
+}
+.h3-style{
+    color: #676E5E;
+    font-weight: 900;
 }
 .harvest{
     width: 100%;
-    height: 40%;
+    /* height: calc(50% - 40px); */
     display: flex;
     position: relative;
 }
@@ -188,40 +214,49 @@ ul li{
     font-size: 16px;
     line-height: 21pt;
     background-color:#CCD6A9 ;
+    padding: 10px 40px;
 }
 .harvest-img{
-    width: 28%;
-    height: 90%;
+    width: 30%;
+    /* height: 90%; */
     margin-top:35px ;
-    margin-right: 35px;
-    box-shadow:0px 0px 5px 2px rgb(129, 129, 129);
+    margin-left: 66%;
+    position: absolute;
+    box-shadow:12px 12px 2px 7px #97A885;
 }
 .dry{
     width: 100%;
-    height: 50%;
-    margin-top: 20px;
+    /* height: calc(50% - 35px); */
+    margin-top: 75px;
     display: flex;
     position: relative;
 }
 .dry-img{
     width: 31%;
-    height: 90%;
-    box-shadow:0px 0px 5px 2px rgb(129, 129, 129);
+    /* height: 90%; */
+    box-shadow:-8px 12px 2px 7px #97A885;
+    position: relative;
+    z-index: 999;
 }
 .dry-text{
     width: 69%;
     font-size: 16px;
     line-height: 21pt;
     background-color:#CCD6A9 ;
+    padding: 10px 40px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 31%;
 }
 
 
-
+/* 製作藥草 */
 #section-3 {
     width:calc(100% - 155px);
     /* height: 1080px; */
     float: right;
     padding: 20px;
+    margin-top: 20px;
 }
 .make{
     width: 68%;
@@ -238,30 +273,60 @@ ul li{
     background-color: #E7C793;
     text-align: center;
     font-size: 21px;
-    margin-right: 5px;
+    margin-right: 2px;
     line-height: 50px;
     border-style:solid;
+    border-width:1px;
     border-color:#D87552 ;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    cursor: pointer;
 }
 
 .tabs-btn-group .tabs-btn.active {
     background-color: #D87552;
     color: white;
     font-weight: 900;
-    border-style:ridge ;
+    border-style:double;
+    border-width:3px;
     border-color:#E7C793 ;
 }
 
 .tabs-content-group .tabs-content {
     background-color: #CCD6A9;
-    padding: 20px 10px;
+    padding: 20px;
     display: none;
+    /* height: 1138px; */
 }
 
 .tabs-content-group .tabs-content.active {
     display: block;
 }
 
+/*蜂蜜 honey*/
+.honey{
+    width:80%;
+    /* height: 50%; */
+    margin: auto;
+    margin: 92px;
+}
+.honey-content{
+    display: flex;
+}
+.honey-img{
+    width: 40%;
+    /* height: 50%; */
+}
+.honey-img2{
+    width: 40%;
+    /* height: 50%; */
+}
+.honey-text{
+    padding: 10px 20px;
+    padding-top: 0;
+}
+
+/*酊劑 tincture*/
 .tincture-t{
     width: 100%;
     height: 45%;
@@ -269,24 +334,69 @@ ul li{
 .tincture-row{
     display: flex;
 }
-.tincture{
+.more{
+    display: none;
+}
+.tincture-row-2{
+    display: flex;
+    margin: 15px 20px;
+}
+.tincture-row-3{
+    display: flex;
+    margin: 0 20px;
+}
+.tincture-2{
     width: 33%;
     height: 100%;
 }
+.tincture-1{
+    width: 33%;
+    height: 100%;
+    margin-right: 15px;
+}
+.tincture-2{
+    width: 33%;
+    height: 100%;
+    margin-right: 15px;
+}
+.tincture-3{
+    width: 33%;
+    height: 100%;
+    margin-right: 15px;
+}
 .tincture-t1{
     width: 100%;
-    height: 30%;
+    height: 200px;
 }
-.tinture-text{
-    font-size: 14px;
-    line-height: 16px;
+.tincture-text{
+    font-size: 16px;
+    line-height: 21px;
+    padding: 10px 20px;
 }
 .tincture-t2{
-    width: 30%;
-    height: 100%;
+    width: 35%;
+    height: auto;
 }
 
+/*甘油 glycerin*/
+.glycerin{
+    width:80%;
+    margin: auto;
+    margin: 92px;
+}
+.glycerin-content{
+    display: flex;
+}
+.glycerin-img{
+    width: 40%;
+    /* height: 50%; */
+}
+.glycerin-text{
+    padding: 10px 20px;
+    padding-top: 0;
+}
 
+/* 適用輕症 */
 #section-4 {
     width:calc(100% - 155px);
     height: 950px;
@@ -294,10 +404,26 @@ ul li{
     background-image: url('/img/圖片重製.jpg');
     background-size: contain;
     background-attachment: fixed;
+    margin-top: 20px;
+}
+.use-title{
+    font-size: 21px;
+    line-height: 60px; 
+    text-align: center;
+    font-weight: 900;
+}
+.use-span{
+    font-size: 18px;
+    line-height: 24px; 
 }
 .use{
     background-color:#CCD6A9;
-    margin:75px 0;
+    margin:115px 0;
+    padding: 15px 0;
+}
+.use2{
+    background-color:#CCD6A9;
+    margin:115px 0;
     padding: 15px 0;
 }
 .use-text{
@@ -306,9 +432,10 @@ ul li{
     margin:auto;
 }
 
+
 .footer{
     width:calc(100% - 155px);
-    height:130px;
+    /* height:130px; */
     float: right;
     background-color:#676E5E;
     display: flex;
@@ -325,13 +452,348 @@ ul li{
     height:100%;
 }
 .email{
-    margin-top: 35px;
+    margin-top: 45px;
     margin-left: 20px;
     margin-right: 20%;
 }
 .footer-text{
-    margin-top: 35px;
+    margin-top: 45px;
 }
 .footer-text1{
     padding-left: 147px;
+}
+
+
+
+@media(max-width:414px){
+    a{
+        color: white;
+    }
+    a:hover{
+        color: #CCD6A9;
+    }
+    .banner{
+        width:100%;
+        height: 175px;
+    }
+    .swiper-side{
+        display: none;
+    }
+    .swiper-container{
+        width: 100%;
+    }
+
+    #navbar{
+        width: 100%;
+        height: 85px;
+        position: relative;
+        padding: unset;
+        z-index: 99999;
+    }
+    .burger{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        background-color: #676E5E;
+        background-image:url('http://www.ee.nsysu.edu.tw/alumni/info/201807/photo/menuicon.png');
+        background-position: center;
+        background-size: cover;
+        margin: 20px 10px;
+    }
+    .burger:hover .menu{
+        display: flex;
+        position: absolute;
+        padding: unset;
+        margin: unset;
+        margin-top: 45px;
+        transition: 0.5s;
+    }
+    .logo-square{
+        width: 110px;
+        height: 65px;
+        position: absolute;
+        margin-left: 41%;
+        margin-top: 0;
+    }
+    .menu{
+        display:none;
+        margin: unset;
+        background-color: #676E5E;
+        width: 108px;
+        height: 260px;
+        flex-direction: column;
+        left: 0;
+    }
+    
+    .title{
+        padding: 0 0;
+    }
+    .title-img{
+        width: 100%;
+        height: 100px;
+        background-image: url('/img/titlepicture.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* 關於藥草 */
+    #section-1 {
+        width:100%;
+    }
+    .aboutArea{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .history{
+        flex-direction: column;
+    }
+    .history-img{
+        width: 100%;
+    }
+    .h2-style{
+        padding: unset;
+        margin: 15px 0;
+    }
+    .history-text{
+        width: 100%;
+        padding: 0 0;
+    }
+    .medicine{
+        margin-top: 25px;
+        flex-direction: column-reverse;
+    }
+    .medicine-img{
+        width: 100%;
+    }
+    .medicine-text{
+        width: 100%;
+        padding: unset;
+    }
+    .picture{
+        display: none;
+    }
+
+    /* 認識藥草 */
+    #section-2 {
+        width:100%;
+        height: auto;
+    }
+    .title-2{
+        padding: unset;
+        margin-left: 20%;
+    }
+    .commonArea{
+        width: 100%;
+        /* height: 430px; */
+        padding: 0 10px;
+    }
+    .commonArea .swiper-container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .commonArea .swiper-slide{
+        flex-direction: column;
+    }
+    .common-img{
+        width: 100%;
+        /* height: 300px; */
+    }
+    .common-text{
+        width: 100%;
+        padding: 21px 40px;
+    }
+    .saveArea{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .harvest{
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column-reverse;
+        position: unset;
+    }
+    .harvest-img{
+        width: 100%;
+        box-shadow: unset;
+        margin: unset;
+        margin-top: 25px;
+        position: unset;
+    }
+    .harvest-text{
+        width: 100%;
+        background-color: unset;
+        padding: unset;
+        position: unset;
+    }
+    .dry{
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .dry-img{
+        width: 100%;
+        box-shadow: unset;
+        position: unset;
+    }
+    .dry-text{
+        width: 100%;
+        background-color: unset;
+        padding: unset;
+        margin: unset;
+        position: unset;
+    }
+
+
+    /* 製作藥草 */
+    #section-3 {
+        width:100%;
+        padding: unset;
+    }
+    .make{
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+    .tabs-btn-group .tabs-btn{
+        font-size: 18px;
+    }
+    .tabs-content-group .tabs-content{
+        padding: 10px;
+        height: auto;
+    }
+    .honey{
+        width: 100%;
+        margin: unset;
+    }
+    .honey-content{
+        width: 100%;
+        flex-direction: column;
+        margin: unset;
+    }
+    .honey-img{
+        width: 100%;
+    }
+    .honey-img2{
+        width: 100%;
+    }
+    .honey-text{
+        padding: unset;
+    }
+    .tincture-row{
+        flex-direction: column;
+    }
+    .more{
+        display: block;
+        text-align: right;
+    }
+    .tincture-1{
+        width: 100%;
+    }
+    .tincture-2{
+        width: 100%;
+    }
+    .tincture-3{
+        display: none;
+    }
+    .tincture-row-2{
+        display: none;
+    }
+    .tincture-row-3{
+        display: none;
+    }
+    .tincture-text{
+        padding: unset;
+    }
+    .glycerin{
+        width: 100%;
+        margin: unset;
+    }
+    .glycerin-content{
+        width: 100%;
+        flex-direction: column;
+        margin: unset;
+    }
+    .glycerin-img{
+        width: 100%;
+        height: 200px;
+    }
+    .glycerin-text{
+        padding: unset;
+    }
+    /* 適用輕症 */
+    #section-4 {
+        width:100%;
+        height: auto;
+        background-image: unset;
+    }
+    .phoneBackground{
+        width: 100%;
+        height: 100%;
+        padding: 45px 0;
+        margin-top: 10px;
+        background-image: url('/img/圖片重製.jpg');
+        background-size: contain;
+        background-attachment: fixed;
+    }
+    .use-title{
+        padding: unset;
+    }
+    .use-span{
+        padding: unset;
+    }
+    .use{
+        margin: unset;
+    }
+    .use2{
+        margin: unset;
+        margin-top: 45px;
+    }
+    .use-text{
+        width: 100%;
+        padding: 0 35px;
+    }
+
+
+    .footer{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    .footer-logo{
+        display: none;
+    }
+    .email{
+        text-align: center;
+        margin: unset;
+    }
+    .footer-text{
+        margin: auto; 
+        flex-direction: ;
+    }
+    .footer-text1{
+        padding: unset;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .footer-text2{
+        padding: unset;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .gototop {
+        width: 70px;
+        height:70px;
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        position: fixed;
+        right: 2px;
+        bottom: 5px;
+        background-color: rgba(34, 58, 42, 0.733);
+        border-radius: 50%;
+        border-style: solid; 
+        z-index: 9999;
+    }
 }
